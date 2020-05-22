@@ -22,35 +22,36 @@ class AddModal extends Component {
       }
     ];
 
-    let requestVolumeThreshold = "20",
-      errorThresholdPercentage = "50",
-      maxConcurrentRequests = "100",
-      sleepWindowInMilliseconds = "5000",
-      groupKey = "",
-      commandKey = "",
+    let
+      // requestVolumeThreshold = "20",
+      // errorThresholdPercentage = "50",
+      // maxConcurrentRequests = "100",
+      // sleepWindowInMilliseconds = "5000",
+      // groupKey = "",
+      // commandKey = "",
       timeout = "3000",
       path = "";
 
     if (props.handle) {
       const myHandle = JSON.parse(props.handle);
-      requestVolumeThreshold = myHandle.requestVolumeThreshold;
-      errorThresholdPercentage = myHandle.errorThresholdPercentage;
-      maxConcurrentRequests = myHandle.maxConcurrentRequests;
-      sleepWindowInMilliseconds = myHandle.sleepWindowInMilliseconds;
-      groupKey = myHandle.groupKey;
-      commandKey = myHandle.commandKey;
+      // requestVolumeThreshold = myHandle.requestVolumeThreshold;
+      // errorThresholdPercentage = myHandle.errorThresholdPercentage;
+      // maxConcurrentRequests = myHandle.maxConcurrentRequests;
+      // sleepWindowInMilliseconds = myHandle.sleepWindowInMilliseconds;
+      // groupKey = myHandle.groupKey;
+      // commandKey = myHandle.commandKey;
       timeout = myHandle.timeout;
       path = myHandle.path;
     }
 
     this.state = {
       ruleConditions,
-      requestVolumeThreshold,
-      errorThresholdPercentage,
-      maxConcurrentRequests,
-      sleepWindowInMilliseconds,
-      groupKey,
-      commandKey,
+      // requestVolumeThreshold,
+      // errorThresholdPercentage,
+      // maxConcurrentRequests,
+      // sleepWindowInMilliseconds,
+      // groupKey,
+      // commandKey,
       timeout,
       path
     };
@@ -82,33 +83,33 @@ class AddModal extends Component {
     const { form, handleOk } = this.props;
     const {
       ruleConditions,
-      requestVolumeThreshold,
-      errorThresholdPercentage,
-      maxConcurrentRequests,
-      sleepWindowInMilliseconds,
-      groupKey,
-      commandKey,
+      // requestVolumeThreshold,
+      // errorThresholdPercentage,
+      // maxConcurrentRequests,
+      // sleepWindowInMilliseconds,
+      // groupKey,
+      // commandKey,
       timeout,
       path
     } = this.state;
-    const myRequestVolumeThreshold =
-      requestVolumeThreshold > 0 ? requestVolumeThreshold : "0";
-    const myErrorThresholdPercentage =
-      errorThresholdPercentage > 0 ? errorThresholdPercentage : "0";
-    const myMaxConcurrentRequests =
-      maxConcurrentRequests > 0 ? maxConcurrentRequests : "0";
-    const mySleepWindowInMilliseconds =
-      sleepWindowInMilliseconds > 0 ? sleepWindowInMilliseconds : "0";
+    // const myRequestVolumeThreshold =
+    //   requestVolumeThreshold > 0 ? requestVolumeThreshold : "0";
+    // const myErrorThresholdPercentage =
+    //   errorThresholdPercentage > 0 ? errorThresholdPercentage : "0";
+    // const myMaxConcurrentRequests =
+    //   maxConcurrentRequests > 0 ? maxConcurrentRequests : "0";
+    // const mySleepWindowInMilliseconds =
+    //   sleepWindowInMilliseconds > 0 ? sleepWindowInMilliseconds : "0";
 
     form.validateFieldsAndScroll((err, values) => {
       const { name, matchMode, loged, enabled } = values;
       const handle = {
-        requestVolumeThreshold: myRequestVolumeThreshold,
-        errorThresholdPercentage: myErrorThresholdPercentage,
-        maxConcurrentRequests: myMaxConcurrentRequests,
-        sleepWindowInMilliseconds: mySleepWindowInMilliseconds,
-        groupKey,
-        commandKey,
+        // requestVolumeThreshold: myRequestVolumeThreshold,
+        // errorThresholdPercentage: myErrorThresholdPercentage,
+        // maxConcurrentRequests: myMaxConcurrentRequests,
+        // sleepWindowInMilliseconds: mySleepWindowInMilliseconds,
+        // groupKey,
+        // commandKey,
         timeout,
         path
       };
@@ -180,12 +181,12 @@ class AddModal extends Component {
     } = this.props;
     const {
       ruleConditions,
-      requestVolumeThreshold,
-      errorThresholdPercentage,
-      maxConcurrentRequests,
-      sleepWindowInMilliseconds,
-      groupKey,
-      commandKey,
+      // requestVolumeThreshold,
+      // errorThresholdPercentage,
+      // maxConcurrentRequests,
+      // sleepWindowInMilliseconds,
+      // groupKey,
+      // commandKey,
       timeout,
       path
     } = this.state;

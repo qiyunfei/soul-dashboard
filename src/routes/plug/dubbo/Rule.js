@@ -22,12 +22,13 @@ class AddModal extends Component {
       }
     ];
 
-    let requestVolumeThreshold = "20",
-    errorThresholdPercentage = "50",
-    maxConcurrentRequests = "100",
-    sleepWindowInMilliseconds = "5000",
-      groupKey = "",
-      commandKey = "",
+    let
+    //   requestVolumeThreshold = "20",
+    // errorThresholdPercentage = "50",
+    // maxConcurrentRequests = "100",
+    // sleepWindowInMilliseconds = "5000",
+    //   groupKey = "",
+    //   commandKey = "",
       loadBalance = "",
       version = "",
       timeout = "3000",
@@ -36,12 +37,12 @@ class AddModal extends Component {
 
     if (props.handle) {
       const myHandle = JSON.parse(props.handle);
-      requestVolumeThreshold = myHandle.requestVolumeThreshold;
-      errorThresholdPercentage = myHandle.errorThresholdPercentage;
-      maxConcurrentRequests = myHandle.maxConcurrentRequests;
-      sleepWindowInMilliseconds = myHandle.sleepWindowInMilliseconds;
-      groupKey = myHandle.groupKey;
-      commandKey = myHandle.commandKey;
+      // requestVolumeThreshold = myHandle.requestVolumeThreshold;
+      // errorThresholdPercentage = myHandle.errorThresholdPercentage;
+      // maxConcurrentRequests = myHandle.maxConcurrentRequests;
+      // sleepWindowInMilliseconds = myHandle.sleepWindowInMilliseconds;
+      // groupKey = myHandle.groupKey;
+      // commandKey = myHandle.commandKey;
       loadBalance = myHandle.loadBalance;
       version = myHandle.version;
       timeout = myHandle.timeout;
@@ -51,12 +52,12 @@ class AddModal extends Component {
 
     this.state = {
       ruleConditions,
-      requestVolumeThreshold,
-      errorThresholdPercentage,
-      maxConcurrentRequests,
-      sleepWindowInMilliseconds,
-      groupKey,
-      commandKey,
+      // requestVolumeThreshold,
+      // errorThresholdPercentage,
+      // maxConcurrentRequests,
+      // sleepWindowInMilliseconds,
+      // groupKey,
+      // commandKey,
       loadBalance,
       version,
       timeout,
@@ -90,12 +91,12 @@ class AddModal extends Component {
     const { form, handleOk } = this.props;
     const {
       ruleConditions,
-      requestVolumeThreshold,
-      errorThresholdPercentage,
-      maxConcurrentRequests,
-      sleepWindowInMilliseconds,
-      groupKey,
-      commandKey,
+      // requestVolumeThreshold,
+      // errorThresholdPercentage,
+      // maxConcurrentRequests,
+      // sleepWindowInMilliseconds,
+      // groupKey,
+      // commandKey,
       loadBalance,
       version,
       timeout,
@@ -103,24 +104,24 @@ class AddModal extends Component {
       retries
     } = this.state;
 
-    const myRequestVolumeThreshold =
-      requestVolumeThreshold > 0 ? requestVolumeThreshold : "0";
-    const myErrorThresholdPercentage =
-      errorThresholdPercentage > 0 ? errorThresholdPercentage : "0";
-    const myMaxConcurrentRequests =
-      maxConcurrentRequests > 0 ? maxConcurrentRequests : "0";
-    const mySleepWindowInMilliseconds =
-      sleepWindowInMilliseconds > 0 ? sleepWindowInMilliseconds : "0";
+    // const myRequestVolumeThreshold =
+    //   requestVolumeThreshold > 0 ? requestVolumeThreshold : "0";
+    // const myErrorThresholdPercentage =
+    //   errorThresholdPercentage > 0 ? errorThresholdPercentage : "0";
+    // const myMaxConcurrentRequests =
+    //   maxConcurrentRequests > 0 ? maxConcurrentRequests : "0";
+    // const mySleepWindowInMilliseconds =
+    //   sleepWindowInMilliseconds > 0 ? sleepWindowInMilliseconds : "0";
 
     form.validateFieldsAndScroll((err, values) => {
       const { name, matchMode, loged, enabled } = values;
       const handle = {
-        requestVolumeThreshold: myRequestVolumeThreshold,
-        errorThresholdPercentage: myErrorThresholdPercentage,
-        maxConcurrentRequests: myMaxConcurrentRequests,
-        sleepWindowInMilliseconds: mySleepWindowInMilliseconds,
-        groupKey,
-        commandKey,
+        // requestVolumeThreshold: myRequestVolumeThreshold,
+        // errorThresholdPercentage: myErrorThresholdPercentage,
+        // maxConcurrentRequests: myMaxConcurrentRequests,
+        // sleepWindowInMilliseconds: mySleepWindowInMilliseconds,
+        // groupKey,
+        // commandKey,
         loadBalance,
         version,
         timeout,
@@ -175,7 +176,7 @@ class AddModal extends Component {
   onHandleChange = (key, value) => {
     this.setState({ [key]: value });
   };
-  
+
   onHandleNumberChange = (key, value) => {
     if(/^\d*$/.test(value)){
       this.setState({ [key]: value });
@@ -242,7 +243,7 @@ class AddModal extends Component {
         sm: { span: 21 }
       }
     };
-    
+
     const formCheckLayout = {
       labelCol: {
         sm: { span: 18 }
@@ -374,7 +375,7 @@ class AddModal extends Component {
               </Button>
             </div>
           </div>
-          
+
           {/* <div className={styles.handleWrap}>
             <div className={styles.header}>
               <h3>Hystrix处理: </h3>
@@ -513,7 +514,7 @@ class AddModal extends Component {
                   }}
                 />
               </li>
-              
+
               <li>
                 <Input
                   addonBefore={<div>版本号</div>}
@@ -538,7 +539,7 @@ class AddModal extends Component {
                   }}
                 />
               </li>
-              
+
             </ul>
           </div>
           <div className={styles.layout}>

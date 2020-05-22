@@ -489,6 +489,7 @@ export default class Dubbo extends Component {
               columns={rulesColumns}
               expandedRowRender={record => <p>{record.handle}</p>}
               dataSource={ruleList}
+              scroll={{ x: 800}}
               pagination={{
                 total: ruleTotal,
                 current: rulePage,

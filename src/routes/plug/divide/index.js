@@ -128,7 +128,7 @@ export default class Divide extends Component {
       message.warn("请先添加选择器");
     }
   };
-  
+
   // 打开编辑弹窗
 
   editSelector = record => {
@@ -492,6 +492,7 @@ export default class Divide extends Component {
               columns={rulesColumns}
               expandedRowRender={record => <p>{record.handle}</p>}
               dataSource={ruleList}
+              scroll={{ x: 800}}
               pagination={{
                 total: ruleTotal,
                 current: rulePage,

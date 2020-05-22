@@ -39,7 +39,7 @@ export default class Metadata extends Component {
       }
     });
   };
-  
+
   pageOnchange = page => {
     this.setState({ currentPage: page });
     this.getAllMetadata(page);
@@ -185,14 +185,14 @@ export default class Metadata extends Component {
     const { dispatch } = this.props;
     const { appName, currentPage, selectedRowKeys } = this.state;
     if (selectedRowKeys && selectedRowKeys.length > 0) {
-      
+
       dispatch({
         type: "metadata/fetchItem",
         payload: {
           id: selectedRowKeys[0]
         },
         callback: user => {
-         
+
           dispatch({
             type: "metadata/updateEn",
             payload: {
@@ -219,14 +219,14 @@ export default class Metadata extends Component {
     const { dispatch } = this.props;
     dispatch({
       type: "metadata/syncDa"
-      
+
     })
   };
 
   render() {
     const { metadata, loading } = this.props;
     const { userList, total } = metadata;
-    
+
     const { currentPage, selectedRowKeys, appName, popup } = this.state;
     const userColumns = [
       {
@@ -368,21 +368,22 @@ export default class Metadata extends Component {
           >
             同步数据
           </Button>
-          
-          
-          
-          
+
+
+
+
         </div>
 
         <Table
           size="small"
           style={{ marginTop: 30 }}
           bordered
-          rowKey={record => record.id} 
+          rowKey={record => record.id}
           loading={loading}
           columns={userColumns}
           dataSource={userList}
           rowSelection={rowSelection}
+          scroll={{ x: 1200,y:800}}
           pagination={{
             total,
             current: currentPage,
