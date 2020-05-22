@@ -383,7 +383,7 @@ export default class Metadata extends Component {
           columns={userColumns}
           dataSource={userList}
           rowSelection={rowSelection}
-          scroll={{ x: 1200,y:800}}
+          scroll={{ x: 1200}}
           pagination={{
             total,
             current: currentPage,
