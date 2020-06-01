@@ -59,7 +59,7 @@ class AddModal extends Component {
               rules: [{ required: true, message: '请输入密码密码' }],
               initialValue: password,
             })(
-              <Input placeholder="密码" />
+              <Input type='password' placeholder="密码" />
             )}
           </FormItem>
           <FormItem
