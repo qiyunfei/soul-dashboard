@@ -35,7 +35,7 @@ export default class Metadata extends Component {
       payload: {
         appName,
         currentPage: page,
-        pageSize: 12
+        pageSize: 100
       }
     });
   };
@@ -86,7 +86,7 @@ export default class Metadata extends Component {
                   fetchValue: {
                     appName: name,
                     currentPage,
-                    pageSize: 12
+                    pageSize: 100
                   },
                   callback: () => {
                     this.closeModal();
@@ -128,7 +128,7 @@ export default class Metadata extends Component {
         fetchValue: {
           appName,
           currentPage,
-          pageSize: 12
+          pageSize: 100
         },
         callback: () => {
           this.setState({ selectedRowKeys: [] });
@@ -166,7 +166,7 @@ export default class Metadata extends Component {
               fetchValue: {
                 appName: name,
                 currentPage,
-                pageSize: 12
+                pageSize: 100
               },
               callback: () => {
                 this.setState({ selectedRowKeys: [] });
@@ -202,7 +202,7 @@ export default class Metadata extends Component {
             fetchValue: {
               appName,
               currentPage,
-              pageSize: 12
+              pageSize: 100
             },
             callback: () => {
               this.setState({ selectedRowKeys: [] });
@@ -387,7 +387,7 @@ export default class Metadata extends Component {
           pagination={{
             total,
             current: currentPage,
-            pageSize: 12,
+            pageSize: 100,
             onChange: this.pageOnchange
           }}
         />
