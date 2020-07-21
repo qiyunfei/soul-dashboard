@@ -99,9 +99,9 @@ class AddModal extends Component {
               initialValue: appSecret
             })(<Input placeholder="appSecret" />)}
           </FormItem>
-          <FormItem label="userId" {...formItemLayout}>
+          <FormItem label="调用方" {...formItemLayout}>
             {getFieldDecorator("userId", {
-              rules: [{ required: true, message: "请输入userId" }],
+              rules: [{ required: true, message: "请输入调用方" }],
               initialValue: userId
             })(<Input placeholder="userId" />)}
           </FormItem>
@@ -132,8 +132,8 @@ class AddModal extends Component {
                         <div className={styles.title}>appName:</div>
                       </li>
                       <li>
-                      <Input 
-                       onChange={e => { this.conditionChange(index,"appName",e.target.value)} } 
+                      <Input
+                       onChange={e => { this.conditionChange(index,"appName",e.target.value)} }
                        value={item.appName}
                        className={styles.appName}
                       />

@@ -88,7 +88,7 @@ export default class Auth extends Component {
         id: record.id
       },
       callback: (auth) => {
-       
+
         this.setState({
           popup: (
             <AddModal
@@ -103,7 +103,7 @@ export default class Auth extends Component {
                     ...values
                   },
                   fetchValue: {
-                    
+
                     currentPage,
                     pageSize: 20
                   },
@@ -121,7 +121,7 @@ export default class Auth extends Component {
       }
     });
   };
-  
+
   editClickMeta = record => {
     const { currentPage } = this.state;
     const { dispatch } = this.props;
@@ -131,7 +131,7 @@ export default class Auth extends Component {
         id: record.id
       },
       callback: (auth)=>{
-        
+
         dispatch({
           type: "auth/fetchMeta",
           payload: {
@@ -156,7 +156,7 @@ export default class Auth extends Component {
                       type: "auth/updateDel",
                       payload: values,
                       fetchValue: {
-                        
+
                         currentPage,
                         pageSize: 20
                       },
@@ -170,12 +170,12 @@ export default class Auth extends Component {
             })
           }
         })
-       
+
       }
     })
   }
-  
-  
+
+
 
   // 点击搜索事件
 
@@ -232,7 +232,7 @@ export default class Auth extends Component {
       type: "auth/fetchMetaGroup",
       payload: {},
       callback: (metaGroup)=>{
-        
+
         this.setState({
           popup: (
             <AddTable
@@ -324,7 +324,7 @@ export default class Auth extends Component {
       },
       {
         align: "center",
-        title: "userId",
+        title: "调用方",
         dataIndex: "userId",
         key: "userId"
       },
@@ -411,7 +411,7 @@ export default class Auth extends Component {
         {/* 头部导航栏 */}
         <div style={{ display: "flex",alignItems: 'center' }}>
 
-         
+
           {/* 内联查询 */}
           <SearchContent onClick={res=>this.searchClick(res)} />
 
@@ -462,7 +462,7 @@ export default class Auth extends Component {
           size="small"
           style={{ marginTop: 30 }}
           bordered
-          rowKey={record => record.id} 
+          rowKey={record => record.id}
           loading={loading}
           columns={authColumns}
           dataSource={authList}
