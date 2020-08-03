@@ -74,6 +74,10 @@ const menuData = [
       {
         name: '元数据管理',
         path: 'metadata'
+      },
+      {
+        name: '服务列表',
+        path: 'serviceList'
       }
 
     ],
@@ -94,7 +98,7 @@ function formatter(data, parentPath = '/', parentAuthority) {
     if (item.children) {
       result.children = formatter(item.children, `${parentPath}${item.path}/`, item.authority);
     }
-    
+
     return result;
   });
 }

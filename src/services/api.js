@@ -39,7 +39,7 @@ export async function getAllMetadata(params) {
   } else {
     myParams = { currentPage, pageSize };
   }
-  
+
   return request(`${baseUrl}/meta-data/queryList?${stringify(myParams)}`, {
     method: `GET`
   });
@@ -94,7 +94,7 @@ export async function syncData() {
   return request(`${baseUrl}/meta-data/syncData`, {
     method: `POST`,
     body: {
-      
+
     }
   });
 }
@@ -115,7 +115,7 @@ export async function deleteMetadata(params) {
 }
 /* 元数据中的批量启用或禁用 */
 export async function updateEnabled(params) {
-  
+
   return request(`${baseUrl}/meta-data/batchEnabled`, {
     method: `POST`,
     body: {
@@ -289,7 +289,7 @@ export async function getAllMetadatas(params) {
 }
 /* 修改Auth */
 export async function updateAuthData(params) {
-  
+
   return request(`${baseUrl}/appAuth/updateDetail`, {
     method: `POST`,
     body: {
@@ -437,5 +437,19 @@ export async function asyncPlugin() {
 export async function asyncOnePlugin(params) {
   return request(`${baseUrl}/plugin/syncPluginData/${params.id}`, {
     method: `PUT`
+  });
+}
+
+
+/* 查询服务 */
+export async function getAllService() {
+  return request(`${baseUrl}/serviceList/appList`, {
+    method: `GET`
+  });
+}
+/* 查询服务列表 */
+export async function getAllServiceList(params) {
+  return request(`${baseUrl}/serviceList/service/${params.appName}`, {
+    method: `GET`
   });
 }
