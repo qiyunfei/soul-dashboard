@@ -14,7 +14,7 @@ class AddTable extends Component {
 //   下拉框事件
  handleChange = (value)=>{
    this.setState({
-       initialData: value,  
+       initialData: value,
    })
   }
 
@@ -27,7 +27,7 @@ class AddTable extends Component {
     e.preventDefault();
     form.validateFieldsAndScroll((err, values) => {
       if (!err) {
-          
+
         handleOk({ pathList,...values });
       }
     });
@@ -36,7 +36,7 @@ class AddTable extends Component {
   onSelectChange = selectedRowKeys => {
     this.setState({ selectedRowKeys });
   }
-    
+
 
   render() {
     let {
@@ -73,8 +73,8 @@ class AddTable extends Component {
         sm: { span: 18 }
       }
     };
-    
-    
+
+
     return (
       <Modal
         width={550}
@@ -87,7 +87,7 @@ class AddTable extends Component {
         onCancel={handleCancel}
       >
         <Form onSubmit={this.handleSubmit} className="login-form">
-           
+
           <FormItem
             label="应用名称"
             {...formItemLayout}
@@ -117,10 +117,10 @@ class AddTable extends Component {
               rules: [{ required: true, message: "请输入appParam" }],
             })(<Input placeholder="appParam" />)}
           </FormItem>
-          <FormItem label="userId" {...formItemLayout}>
+          <FormItem label="调用方" {...formItemLayout}>
             {getFieldDecorator("userId", {
-              rules: [{ required: true, message: "请输入userId" }],
-            })(<Input placeholder="userId" />)}
+              rules: [{ required: true, message: "请输入调用方" }],
+            })(<Input placeholder="调用方" />)}
           </FormItem>
           <FormItem label="extInfo" {...formItemLayout}>
             {getFieldDecorator("extInfo", {
@@ -129,7 +129,7 @@ class AddTable extends Component {
           </FormItem>
           {/* 下拉框关联表格 */}
           <Table bordered rowSelection={rowSelection} columns={columns} dataSource={data} rowKey={record => record.id} pagination={{current: 1,pageSize: 10}} />
-         
+
         </Form>
       </Modal>
     );
