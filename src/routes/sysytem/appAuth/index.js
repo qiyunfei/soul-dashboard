@@ -311,25 +311,25 @@ export default class Auth extends Component {
     const { currentPage, selectedRowKeys, appKey,phone, popup } = this.state;
     const authColumns = [
       {
-        align: "center",
+        align: "left",
         title: "appkey",
         dataIndex: "appKey",
         key: "appKey"
       },
       {
-        align: "center",
+        align: "left",
         title: "appSecret",
         dataIndex: "appSecret",
         key: "appSecret"
       },
       {
-        align: "center",
+        align: "left",
         title: "调用方",
         dataIndex: "userId",
         key: "userId"
       },
       {
-        align: "center",
+        align: "left",
         title: "phone",
         dataIndex: "phone",
         key: "phone"

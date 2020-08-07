@@ -77,7 +77,7 @@ class AddTable extends Component {
 
     return (
       <Modal
-        width={550}
+        width={1000}
         centered
         title="认证"
         visible

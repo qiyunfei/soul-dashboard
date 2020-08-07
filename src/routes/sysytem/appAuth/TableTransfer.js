@@ -11,20 +11,16 @@ const columns = [
   {
     dataIndex: 'path',
     title: '资源路径',
-    width: 200,
-    textWrap: 'word-break',
-    align: 'center',
-    ellipsis: true
+    width: 400,
+    align: 'left',
   },
   {
     dataIndex: 'appName',
     title: '应用名称',
-    width: 100,
-    textWrap: 'word-break',
-    align: 'center',
-    ellipsis: true
+    width: 200,
+    align: 'left',
   },
-  
+
 ];
 
 class TableTransfer extends React.Component {
@@ -34,12 +30,12 @@ class TableTransfer extends React.Component {
       current: 1,
       pageSize: 10,
     },
-    
+
   };
 
-  
 
-  
+
+
 
   render() {
     const { authName } = this.props;
@@ -90,14 +86,14 @@ class TableTransfer extends React.Component {
           // const leftDataSource = dataSource.map(item => ({
           //   ...item,
           //   disabled: judgeArr.includes(item.path) ,
-           
+
           // }));
-          
+
           return (
             <Table
               rowSelection={rowSelection}
               columns={columns}
-              rowKey={record =>record.path} 
+              rowKey={record =>record.path}
               style={{ pointerEvents: listDisabled ? 'none' : null }}
               dataSource={filteredItems}
               // dataSource={direction === 'left' ? leftDataSource : rightDataSource}
@@ -109,7 +105,7 @@ class TableTransfer extends React.Component {
                   onItemSelect(path, !listSelectedKeys.includes(path));
                 },
               })}
-              
+
               pagination={direction === 'left' ? pagination : true}
             />
           );
@@ -125,34 +121,36 @@ class TableTransferComponent extends React.Component {
     authName: this.props.authName,
     datalist: this.props.datalist,
     auth: this.props.auth.map(item=>{item.key=item.id; return item})
-    
+
   };
-  
-  
+
+
 
   onChange = targetKeys => {
     this.setState({
       targetKeys,
     });
-   
+
     // 传递更数据
     let data = this.state.datalist.filter(item=>targetKeys.includes(item.path))
-    
+
     this.props.handleGetUpdateMetas(data);
   };
 
   render() {
-    return <TableTransfer 
-             auth={this.state.auth} 
-             authName={this.state.authName} 
-             datalist={this.state.datalist} 
-             targetKeys={this.state.targetKeys} 
-             onChange={this.onChange} 
-             showSearch={true}
-             filterOption={(inputValue, item) =>
+    return (
+      <TableTransfer
+        auth={this.state.auth}
+        authName={this.state.authName}
+        datalist={this.state.datalist}
+        targetKeys={this.state.targetKeys}
+        onChange={this.onChange}
+        showSearch={true}
+        filterOption={(inputValue, item) =>
               item.appName.indexOf(inputValue) !== -1 || item.path.indexOf(inputValue) !== -1
             }
-             />;
+      />
+);
   }
 }
 export default TableTransferComponent
