@@ -231,7 +231,7 @@ export default class Plugin extends Component {
     const { plugin, loading } = this.props;
     const { pluginList, total } = plugin;
     const { currentPage, selectedRowKeys, name, popup } = this.state;
-    
+
     const pluginColumns = [
       {
         align: "center",
@@ -263,23 +263,23 @@ export default class Plugin extends Component {
       {
         align: "center",
         title: "创建时间",
+        width: 200,
         dataIndex: "dateCreated",
-        key: "dateCreated",
-        width: 160
+        key: "dateCreated"
       },
       {
         align: "center",
         title: "更新时间",
+        width: 200,
         dataIndex: "dateUpdated",
         key: "dateUpdated",
-        width: 160
       },
       {
         align: "center",
         title: "状态",
         dataIndex: "enabled",
         key: "enabled",
-        width: 150,
+        width: 60,
         render: text => {
           if (text) {
             return <div className="open">开启</div>;
@@ -293,7 +293,7 @@ export default class Plugin extends Component {
         title: "操作",
         dataIndex: "time",
         key: "time",
-        width: 150,
+        width: 60,
         render: (text, record) => {
           return (
             <div
@@ -313,7 +313,7 @@ export default class Plugin extends Component {
       selectedRowKeys,
       onChange: this.onSelectChange
     };
-   
+
     return (
       <div className="plug-content-wrap">
         <div style={{ display: "flex" }}>

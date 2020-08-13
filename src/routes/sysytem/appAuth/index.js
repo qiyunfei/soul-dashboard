@@ -357,6 +357,7 @@ export default class Auth extends Component {
       {
         align: "center",
         title: "更新时间",
+        width: 180,
         dataIndex: "dateUpdated",
         render: dateUpdated => dayjs(dateUpdated).format('YYYY-MM-DD HH:mm:ss' ),
         key: "dateUpdated"

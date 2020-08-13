@@ -230,56 +230,68 @@ export default class Metadata extends Component {
     const { currentPage, selectedRowKeys, appName, popup } = this.state;
     const userColumns = [
       {
-        align: "center",
+        align: "left",
         title: "应用名称",
+        width: 200,
         dataIndex: "appName",
         key: "appName"
       },
       {
-        align: "center",
+        align: "left",
         title: "路径",
         dataIndex: "path",
         key: "path"
       },
       {
-        align: "center",
+        align: "left",
         title: "路径描述",
+        width: 150,
         dataIndex: "pathDesc",
         key: "pathDesc"
       },
       {
-        align: "center",
+        align: "left",
         title: "服务接口",
+        width: 150,
         dataIndex: "serviceName",
-        key: "serviceName"
+        key: "serviceName",
+        textWrap: 'word-break',
+        ellipsis: true
       },
       {
-        align: "center",
+        align: "left",
         title: "方法名称",
+        width: 200,
         dataIndex: "methodName",
         key: "methodName"
       },
       {
-        align: "center",
+        align: "left",
         title: "参数类型",
+        width: 150,
         dataIndex: "parameterTypes",
-        key: "parameterTypes"
+        key: "parameterTypes",
+        textWrap: 'word-break',
+        ellipsis: true
       },
       {
         align: "center",
         title: "rpc类型",
+        width: 80,
         dataIndex: "rpcType",
         key: "rpcType"
       },
       {
         align: "center",
         title: "rpc扩展参数",
+        width: 150,
         dataIndex: "rpcExt",
         key: "rpcExt"
       },
       {
         align: "center",
         title: "状态",
+        width: 60,
         dataIndex: "enabled",
         key: "enabled",
         render: text => {
@@ -293,6 +305,7 @@ export default class Metadata extends Component {
       {
         align: "center",
         title: "操作",
+        width: 60,
         dataIndex: "operate",
         key: "operate",
         render: (text, record) => {

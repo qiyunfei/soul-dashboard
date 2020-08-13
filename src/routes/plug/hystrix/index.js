@@ -297,7 +297,7 @@ export default class Hystrix extends Component {
     } = this.props;
     const selectColumns = [
       {
-        align: "center",
+        align: "left",
         title: "名称",
         dataIndex: "name",
         key: "name"
@@ -305,6 +305,7 @@ export default class Hystrix extends Component {
       {
         align: "center",
         title: "开启",
+        width: 60,
         dataIndex: "enabled",
         key: "enabled",
         render: text => {
@@ -318,6 +319,7 @@ export default class Hystrix extends Component {
       {
         align: "center",
         title: "操作",
+        width: 100,
         dataIndex: "operate",
         key: "operate",
         render: (text, record) => {
@@ -365,7 +367,7 @@ export default class Hystrix extends Component {
 
     const rulesColumns = [
       {
-        align: "center",
+        align: "left",
         title: "规则名称",
         dataIndex: "name",
         key: "name"
@@ -373,6 +375,7 @@ export default class Hystrix extends Component {
       {
         align: "center",
         title: "开启",
+        width: 60,
         dataIndex: "enabled",
         key: "enabled",
         render: text => {
@@ -386,12 +389,14 @@ export default class Hystrix extends Component {
       {
         align: "center",
         title: "更新时间",
+        width: 180,
         dataIndex: "dateCreated",
         key: "dateCreated"
       },
       {
         align: "center",
         title: "操作",
+        width: 100,
         dataIndex: "operate",
         key: "operate",
         render: (text, record) => {

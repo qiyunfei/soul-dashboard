@@ -191,12 +191,14 @@ export default class Manage extends Component {
       {
         align: "center",
         title: "创建时间",
+        width: 180,
         dataIndex: "dateCreated",
         key: "dateCreated"
       },
       {
         align: "center",
         title: "更新时间",
+        width: 180,
         dataIndex: "dateUpdated",
         key: "dateUpdated"
       },
@@ -205,6 +207,7 @@ export default class Manage extends Component {
         title: "操作",
         dataIndex: "operate",
         key: "operate",
+        width: 100,
         render: (text, record) => {
           return (
             <div

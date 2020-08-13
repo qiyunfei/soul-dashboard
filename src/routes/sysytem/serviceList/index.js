@@ -76,13 +76,14 @@ export default class ServiceList extends Component {
     } = this.props;
     const serviceColumns = [
       {
-        align: "center",
+        align: "left",
         title: "服务名称",
+        width: 300,
         dataIndex: "appName",
         key: "appName"
       },
       {
-        align: "center",
+        align: "left",
         title: "服务根路径",
         dataIndex: "path",
         key: "path"
@@ -90,6 +91,7 @@ export default class ServiceList extends Component {
       {
         align: "center",
         title: "服务类型",
+        width: 100,
         dataIndex: "rpcType",
         key: "rpcType"
       }
@@ -97,13 +99,14 @@ export default class ServiceList extends Component {
 
     const serviceListColumns = [
       {
-        align: "center",
+        align: "left",
         title: "服务名称",
+        width: 300,
         dataIndex: "appName",
         key: "appName"
       },
       {
-        align: "center",
+        align: "left",
         title: "服务地址",
         dataIndex: "address",
         key: "address"
